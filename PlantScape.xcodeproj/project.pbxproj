@@ -11,6 +11,7 @@
 		891CC99C2C09697300376A93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CC99B2C09697300376A93 /* ContentView.swift */; };
 		891CC99E2C09697500376A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC99D2C09697500376A93 /* Assets.xcassets */; };
 		891CC9A12C09697500376A93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC9A02C09697500376A93 /* Preview Assets.xcassets */; };
+		891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CC9AA2C097F2800376A93 /* ScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		891CC99B2C09697300376A93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		891CC99D2C09697500376A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		891CC9A02C09697500376A93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		891CC9AA2C097F2800376A93 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				891CC99B2C09697300376A93 /* ContentView.swift */,
 				891CC99D2C09697500376A93 /* Assets.xcassets */,
 				891CC99F2C09697500376A93 /* Preview Content */,
+				891CC9AA2C097F2800376A93 /* ScannerView.swift */,
 			);
 			path = PlantScape;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */,
 				891CC99C2C09697300376A93 /* ContentView.swift in Sources */,
 				891CC99A2C09697300376A93 /* PlantScapeApp.swift in Sources */,
 			);

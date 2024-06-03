@@ -4,37 +4,22 @@
 //
 //  Created by Mohammad Zhafran Dzaky on 31/05/24.
 //
-
 import SwiftUI
-
-struct Plant: Hashable {
-    var name: String
-    var description: String
-    var growingTips: String
-    var image: String
-    
-    init(name: String, description: String, growingTips: String, image: String) {
-        self.name = name
-        self.description = description
-        self.growingTips = growingTips
-        self.image = image
-    }
-}
 
 struct ContentView: View {
     
     @State private var searchText = ""
     
     let plants: [Plant] = [
-        Plant(name: "Plant A", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant B", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant C", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant D", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant E", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant F", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant G", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant H", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant I", description: "description", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant A", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant B", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant C", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant D", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant E", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant F", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant G", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant H", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
+        Plant(name: "Plant I", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
     ]
     
     let columns = [
@@ -70,20 +55,26 @@ struct ContentView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 16, content: {
                             ForEach(searchResults, id: \.self) { data in
-                                VStack(spacing: 12) {
-                                    HStack{ Spacer() }
-                                    Image("image/planticon")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 100)
-                                    Text(data.name)
-                                        .font(.headline)
-                                }.padding()
+                                NavigationLink(destination: DetailView()) {
+                                    VStack(spacing: 12) {
+                                        HStack{ Spacer() }
+                                        Image("image/planticon")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 100)
+                                        Text(data.name)
+                                            .font(.headline)
+                                    }
+                                    .padding()
                                     .frame(height: 180)
                                     .background(RoundedRectangle(cornerRadius: 8)
                                         .fill(Color.white)
-                                        .shadow(color: Color(UIColor.lightGray), radius: 1, x: 0, y: 0)
+                                        .shadow(
+                                            color: Color(UIColor.lightGray),
+                                            radius: 1, x: 0, y: 0
+                                        )
                                     )
+                                }
                             }
                         }).padding(.horizontal, 28)
                             .padding(.top)

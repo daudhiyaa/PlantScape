@@ -75,7 +75,7 @@ struct ResultSheet: View {
                         .padding(.horizontal, 28)
                         .padding(.bottom, 28)
                         .padding(.top, 16)
-                        .background(Color.white)
+                        .background(Color(UIColor.systemBackground))
                     }.background(.red)
                 }
             )
@@ -111,10 +111,9 @@ struct ScannerView: View {
                     ResultSheet()
                 })
         }.tint(Color.green)
-            .accentColor(Color.green)
     }
 }
 
 #Preview {
-    ScannerView()
+    ScannerView().preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }

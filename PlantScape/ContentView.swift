@@ -68,11 +68,7 @@ struct ContentView: View {
                                     .padding()
                                     .frame(height: 180)
                                     .background(RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color.white)
-                                        .shadow(
-                                            color: Color(UIColor.lightGray),
-                                            radius: 1, x: 0, y: 0
-                                        )
+                                        .fill(Color(UIColor.secondarySystemBackground))
                                     )
                                 }
                             }
@@ -81,6 +77,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .background(Color(UIColor.systemBackground))
             .navigationTitle("Plantdex")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText)
@@ -105,5 +102,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().preferredColorScheme(.dark)
 }

@@ -15,6 +15,8 @@
 		B40A017D2C0D56E900D834D9 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A017C2C0D56E900D834D9 /* Plant.swift */; };
 		B40A01802C0D579000D834D9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A017F2C0D579000D834D9 /* DetailView.swift */; };
 		B40A01822C0D5F9C00D834D9 /* MultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A01812C0D5F9C00D834D9 /* MultipeerSession.swift */; };
+		B40A01862C0D715900D834D9 /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A01852C0D715900D834D9 /* SharingView.swift */; };
+		B40A01892C0D7BC200D834D9 /* DummyPlantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A01882C0D7BC200D834D9 /* DummyPlantsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B40A017F2C0D579000D834D9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B40A01812C0D5F9C00D834D9 /* MultipeerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerSession.swift; sourceTree = "<group>"; };
 		B40A01832C0D5FC900D834D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40A01852C0D715900D834D9 /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
+		B40A01882C0D7BC200D834D9 /* DummyPlantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPlantsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		891CC9982C09697300376A93 /* PlantScape */ = {
 			isa = PBXGroup;
 			children = (
+				B40A01872C0D7BB400D834D9 /* Data */,
 				B40A017A2C0D564000D834D9 /* Model */,
 				B40A017E2C0D56FD00D834D9 /* Utils */,
 				B40A017B2C0D564F00D834D9 /* View */,
@@ -93,6 +98,7 @@
 			children = (
 				B40A017F2C0D579000D834D9 /* DetailView.swift */,
 				891CC9AA2C097F2800376A93 /* ScannerView.swift */,
+				B40A01852C0D715900D834D9 /* SharingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +109,14 @@
 				B40A01812C0D5F9C00D834D9 /* MultipeerSession.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B40A01872C0D7BB400D834D9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B40A01882C0D7BC200D834D9 /* DummyPlantsData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40A01862C0D715900D834D9 /* SharingView.swift in Sources */,
 				B40A01822C0D5F9C00D834D9 /* MultipeerSession.swift in Sources */,
+				B40A01892C0D7BC200D834D9 /* DummyPlantsData.swift in Sources */,
 				891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */,
 				B40A017D2C0D56E900D834D9 /* Plant.swift in Sources */,
 				891CC99C2C09697300376A93 /* ContentView.swift in Sources */,

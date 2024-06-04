@@ -5,22 +5,14 @@
 //  Created by Mohammad Zhafran Dzaky on 31/05/24.
 //
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var plants: [Plant]
     
+    @StateObject var multipeerSession: MultipeerSession = MultipeerSession(username: UIDevice.current.name)
     @State private var searchText = ""
-    
-    let plants: [Plant] = [
-        Plant(name: "Plant A", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant B", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant C", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant D", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant E", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant F", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant G", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant H", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-        Plant(name: "Plant I", desc: "desc", growingTips: "Dimandiin dan diberi makan", image: "tree.fill"),
-    ]
     
     let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -30,9 +22,22 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                
+                Button("Add Plant") {
+                    modelContext.insert(dummyPlants[Int.random(in: 0..<dummyPlants.count)])
+                }
+                Button("Delete All") {
+                    for plant in plants {
+                        modelContext.delete(plant)
+                    }
+                }.foregroundColor(.red)
+                
                 if plants.isEmpty {
                     VStack(spacing: 20) {
                         Image("image/planticon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 240)
                         VStack(spacing: 6) {
                             Text("Lets discover a new plant")
                                 .font(.headline)
@@ -55,10 +60,12 @@ struct ContentView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 16, content: {
                             ForEach(searchResults, id: \.self) { data in
-                                NavigationLink(destination: DetailView()) {
+                                NavigationLink(
+                                    destination: DetailView(plant: data).environmentObject(multipeerSession)
+                                ) {
                                     VStack(spacing: 12) {
                                         HStack{ Spacer() }
-                                        Image("image/planticon")
+                                        Image(data.image)
                                             .resizable()
                                             .scaledToFit()
                                             .frame(width: 100)
@@ -89,7 +96,13 @@ struct ContentView: View {
                 }
             }
         }
-        .tint(Color.green)
+        .onChange(of: multipeerSession.receivedPlant) {
+            for plant in dummyPlants {
+                if(plant.name == multipeerSession.receivedPlant.name) {
+                    modelContext.insert(plant)
+                }
+            }
+        }
     }
     
     var searchResults: [Plant] {

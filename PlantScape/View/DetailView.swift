@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct DetailView: View {
+    @EnvironmentObject var multipeerSession: MultipeerSession
+    @State private var isSheetPresented = false
+    
+    var plant: Plant
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
                 ScrollView {
                     VStack(spacing: 20) {
-                        Image("image/planticon")
+                        Image(plant.image)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 160)
-                        Text("Plant A").font(.title3).fontWeight(.bold)
+                        Text(plant.name).font(.title3).fontWeight(.bold)
                         GroupBox("Growing Tips") {
                             GroupBox {
                                 VStack(alignment: .leading, spacing: 6) {
@@ -36,8 +41,8 @@ struct DetailView: View {
                         }
                         GroupBox("Description") {
                             GroupBox {
-                                VStack(alignment: .leading) {
-                                    Text("This is plant A that grows primarily in West part of the earth.")
+                                VStack() {
+                                    Text(plant.desc).frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             }
                         }
@@ -81,15 +86,15 @@ struct DetailView: View {
         .navigationBarTitle("Detail", displayMode: .automatic)
         .navigationBarItems(
             trailing: Button(action: {
-                
+                self.isSheetPresented = true
             }) {
-                Image(systemName: "square.and.arrow.up")
+                Image(systemName: "square.and.arrow.up").foregroundColor(.green)
+            }.popover(isPresented: $isSheetPresented) {
+                NavigationView {
+                    SharingView(isSheetPresented: $isSheetPresented, plant: plant).environmentObject(multipeerSession)
+                }
             }
         )
         .tint(Color.green)
     }
-}
-
-#Preview {
-    DetailView()
 }

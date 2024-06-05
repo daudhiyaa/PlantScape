@@ -29,12 +29,12 @@ struct DetailView: View {
                                     HStack(alignment: .top) {
                                         Image(systemName: "sun.max")
                                             .renderingMode(.original)
-                                        Text("Full sun").frame(maxWidth: .infinity, alignment: .leading)
+                                        Text(plant.growingTips.sun).frame(maxWidth: .infinity, alignment: .leading)
                                     }
                                     HStack(alignment: .top) {
                                         Image(systemName: "water.waves")
                                             .renderingMode(.original)
-                                        Text("Infrequent watering").frame(maxWidth: .infinity, alignment: .leading)
+                                        Text(plant.growingTips.water).frame(maxWidth: .infinity, alignment: .leading)
                                     }
                                 }
                             }
@@ -52,7 +52,7 @@ struct DetailView: View {
                                     HStack(alignment: .top) {
                                         Image(systemName: "map")
                                             .renderingMode(.original)
-                                        Text("Apple Developer Academy").frame(maxWidth: .infinity, alignment: .leading)
+                                        Text(plant.location).frame(maxWidth: .infinity, alignment: .leading)
                                     }
                                 }
                             }
@@ -65,7 +65,9 @@ struct DetailView: View {
                 VStack {
                     Spacer()
                     VStack {
-                        Button(action: {}, label: {
+                        Button(action: {
+                            // TODO: Scan 360
+                        }, label: {
                             Text("AR View")
                                 .frame(maxWidth: .infinity)
                         })

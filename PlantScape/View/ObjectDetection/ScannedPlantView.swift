@@ -34,10 +34,10 @@ struct ScannedPlantView: View {
                             GroupBox("Growing Tips") {
                                 GroupBox {
                                     VStack(alignment: .leading, spacing: 6) {
-                                        ForEach(plant.growingTips.split(separator: ", ").map(String.init), id: \.self) { tip in
-                                            Text(tip)
-                                                .frame(maxWidth: .infinity, alignment: .leading)
-                                        }
+                                        Text(plant.growingTips.sun)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        Text(plant.growingTips.water)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
                                     }
                                 }
                             }
@@ -52,7 +52,7 @@ struct ScannedPlantView: View {
                             GroupBox("Location") {
                                 GroupBox {
                                     VStack(alignment: .leading) {
-                                        Text("Apple Developer Academy")
+                                        Text(plant.location)
                                             .frame(maxWidth: .infinity, alignment: .leading)
                                     }
                                 }

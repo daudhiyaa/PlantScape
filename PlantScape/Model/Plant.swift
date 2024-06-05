@@ -14,15 +14,22 @@ class Plant: Hashable {
     var identifier: String
     var name: String
     var desc: String
-    var growingTips: String
+    var growingTips: GrowingTips
     var image: String
+    var location: String
     
-    init(id: UUID = UUID(), identifier: String, name: String, desc: String, growingTips: String, image: String) {
+    init(id: UUID = UUID(), identifier: String, name: String, desc: String, growingTips: GrowingTips, image: String, location: String) {
         self.id = id
         self.identifier = identifier
         self.name = name
         self.desc = desc
         self.growingTips = growingTips
         self.image = image
+        self.location = location
     }
+}
+
+struct GrowingTips: Codable {
+    var sun: String
+    var water: String
 }

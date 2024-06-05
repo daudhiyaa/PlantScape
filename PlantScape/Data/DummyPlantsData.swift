@@ -7,14 +7,14 @@
 
 import Foundation
 
-let dummyPlants: [Plant] = [
-    Plant(name: "Plant A", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant B", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant C", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant D", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant E", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant F", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant G", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant H", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
-    Plant(name: "Plant I", desc: "Lorem Ipsum Description", growingTips: "Dimandiin dan diberi makan", image: "image/planticon"),
+let plantDataset: [Plant] = [
+    Plant(identifier: "Anggrek", name: "Orchid", desc: "A beautiful orchid with delicate flowers.", growingTips: "Partial shade, regular watering.", image: "image/orchid"),
+    Plant(identifier: "Aster", name: "Aster", desc: "A vibrant flower known for its star-shaped blooms.", growingTips: "Full sun, moderate watering.", image: "image/planticon"),
+    Plant(identifier: "Calathea", name: "Calathea", desc: "A tropical plant with strikingly patterned leaves.", growingTips: "Indirect light, high humidity, regular watering.", image: "image/planticon"),
+    Plant(identifier: "Coleus", name: "Coleus", desc: "A colorful plant with a variety of leaf patterns.", growingTips: "Partial shade, regular watering.", image: "image/coleus"),
+    Plant(identifier: "Holiday Cactus", name: "Holiday Cactus", desc: "A popular indoor plant known for its festive blooms.", growingTips: "Indirect light, moderate watering.", image: "image/holiday_cactus"),
+    Plant(identifier: "Kenanga", name: "Ylang-Ylang", desc: "A fragrant tropical tree known for its aromatic flowers.", growingTips: "Full sun to partial shade, regular watering.", image: "image/kenanga"),
+    Plant(identifier: "Kupu-Kupu", name: "Butterfly Plant", desc: "A plant with butterfly-shaped flowers.", growingTips: "Full sun, moderate watering.", image: "image/planticon"),
+    Plant(identifier: "Matahari", name: "Sunflower", desc: "A tall, bright flower that follows the sun.", growingTips: "Full sun, moderate watering.", image: "image/sunflower"),
+    Plant(identifier: "Melati", name: "Jasmine", desc: "A fragrant plant with small, white flowers.", growingTips: "Full sun to partial shade, regular watering.", image: "image/jasmine")
 ]

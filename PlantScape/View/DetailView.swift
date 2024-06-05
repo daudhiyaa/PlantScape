@@ -78,8 +78,8 @@ struct DetailView: View {
                         .padding(.horizontal, 28)
                         .padding(.bottom, 28)
                         .padding(.top, 16)
-                        .background(Color.white)
-                    }.background(.red)
+                        .background(Color(UIColor.systemBackground))
+                    }
                 }
             )
         }

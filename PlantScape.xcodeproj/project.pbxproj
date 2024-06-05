@@ -12,6 +12,14 @@
 		891CC99E2C09697500376A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC99D2C09697500376A93 /* Assets.xcassets */; };
 		891CC9A12C09697500376A93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC9A02C09697500376A93 /* Preview Assets.xcassets */; };
 		891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CC9AA2C097F2800376A93 /* ScannerView.swift */; };
+		89838FBB2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 89838FBA2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel */; };
+		89838FBD2C0F855B00BC65B0 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FBC2C0F855B00BC65B0 /* ObjectDetectionManager.swift */; };
+		89838FC02C0F858700BC65B0 /* ObjectScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FBF2C0F858700BC65B0 /* ObjectScannerDelegate.swift */; };
+		89838FC22C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FC12C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift */; };
+		89838FC42C0F873B00BC65B0 /* DetectionResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FC32C0F873B00BC65B0 /* DetectionResultViewModel.swift */; };
+		89838FC72C0F87EB00BC65B0 /* ObjectScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FC62C0F87EB00BC65B0 /* ObjectScannerView.swift */; };
+		89838FC92C0F886A00BC65B0 /* RequestCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FC82C0F886A00BC65B0 /* RequestCameraView.swift */; };
+		89838FCB2C0F88DA00BC65B0 /* ScannedPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FCA2C0F88DA00BC65B0 /* ScannedPlantView.swift */; };
 		B40A017D2C0D56E900D834D9 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A017C2C0D56E900D834D9 /* Plant.swift */; };
 		B40A01802C0D579000D834D9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A017F2C0D579000D834D9 /* DetailView.swift */; };
 		B40A01822C0D5F9C00D834D9 /* MultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A01812C0D5F9C00D834D9 /* MultipeerSession.swift */; };
@@ -26,6 +34,14 @@
 		891CC99D2C09697500376A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		891CC9A02C09697500376A93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		891CC9AA2C097F2800376A93 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		89838FBA2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantDetectionModel.mlmodel; sourceTree = "<group>"; };
+		89838FBC2C0F855B00BC65B0 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
+		89838FBF2C0F858700BC65B0 /* ObjectScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectScannerDelegate.swift; sourceTree = "<group>"; };
+		89838FC12C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectorViewModel.swift; sourceTree = "<group>"; };
+		89838FC32C0F873B00BC65B0 /* DetectionResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionResultViewModel.swift; sourceTree = "<group>"; };
+		89838FC62C0F87EB00BC65B0 /* ObjectScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectScannerView.swift; sourceTree = "<group>"; };
+		89838FC82C0F886A00BC65B0 /* RequestCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCameraView.swift; sourceTree = "<group>"; };
+		89838FCA2C0F88DA00BC65B0 /* ScannedPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedPlantView.swift; sourceTree = "<group>"; };
 		B40A017C2C0D56E900D834D9 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		B40A017F2C0D579000D834D9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B40A01812C0D5F9C00D834D9 /* MultipeerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerSession.swift; sourceTree = "<group>"; };
@@ -64,6 +80,10 @@
 		891CC9982C09697300376A93 /* PlantScape */ = {
 			isa = PBXGroup;
 			children = (
+				89838FBE2C0F857000BC65B0 /* Protocol */,
+				89838FB92C0F851F00BC65B0 /* Resource */,
+				89838FB82C0F850400BC65B0 /* Manager */,
+				89838FB72C0F84F800BC65B0 /* ViewModel */,
 				B40A01872C0D7BB400D834D9 /* Data */,
 				B40A017A2C0D564000D834D9 /* Model */,
 				B40A017E2C0D56FD00D834D9 /* Utils */,
@@ -85,6 +105,50 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		89838FB72C0F84F800BC65B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				89838FC12C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift */,
+				89838FC32C0F873B00BC65B0 /* DetectionResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		89838FB82C0F850400BC65B0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				89838FBC2C0F855B00BC65B0 /* ObjectDetectionManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		89838FB92C0F851F00BC65B0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				89838FBA2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		89838FBE2C0F857000BC65B0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				89838FBF2C0F858700BC65B0 /* ObjectScannerDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		89838FC52C0F87A300BC65B0 /* ObjectDetection */ = {
+			isa = PBXGroup;
+			children = (
+				891CC9AA2C097F2800376A93 /* ScannerView.swift */,
+				89838FC62C0F87EB00BC65B0 /* ObjectScannerView.swift */,
+				89838FC82C0F886A00BC65B0 /* RequestCameraView.swift */,
+				89838FCA2C0F88DA00BC65B0 /* ScannedPlantView.swift */,
+			);
+			path = ObjectDetection;
+			sourceTree = "<group>";
+		};
 		B40A017A2C0D564000D834D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +160,8 @@
 		B40A017B2C0D564F00D834D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89838FC52C0F87A300BC65B0 /* ObjectDetection */,
 				B40A017F2C0D579000D834D9 /* DetailView.swift */,
-				891CC9AA2C097F2800376A93 /* ScannerView.swift */,
 				B40A01852C0D715900D834D9 /* SharingView.swift */,
 			);
 			path = View;
@@ -191,10 +255,18 @@
 			files = (
 				B40A01862C0D715900D834D9 /* SharingView.swift in Sources */,
 				B40A01822C0D5F9C00D834D9 /* MultipeerSession.swift in Sources */,
+				89838FC02C0F858700BC65B0 /* ObjectScannerDelegate.swift in Sources */,
 				B40A01892C0D7BC200D834D9 /* DummyPlantsData.swift in Sources */,
 				891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */,
+				89838FBD2C0F855B00BC65B0 /* ObjectDetectionManager.swift in Sources */,
+				89838FC92C0F886A00BC65B0 /* RequestCameraView.swift in Sources */,
+				89838FCB2C0F88DA00BC65B0 /* ScannedPlantView.swift in Sources */,
+				89838FC72C0F87EB00BC65B0 /* ObjectScannerView.swift in Sources */,
 				B40A017D2C0D56E900D834D9 /* Plant.swift in Sources */,
 				891CC99C2C09697300376A93 /* ContentView.swift in Sources */,
+				89838FC42C0F873B00BC65B0 /* DetectionResultViewModel.swift in Sources */,
+				89838FBB2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel in Sources */,
+				89838FC22C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift in Sources */,
 				B40A01802C0D579000D834D9 /* DetailView.swift in Sources */,
 				891CC99A2C09697300376A93 /* PlantScapeApp.swift in Sources */,
 			);
@@ -330,9 +402,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantScape/Preview Content\"";
-				DEVELOPMENT_TEAM = S929UZL64F;
+				DEVELOPMENT_TEAM = 3A5KTMAWHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to function properly";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -359,9 +432,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantScape/Preview Content\"";
-				DEVELOPMENT_TEAM = S929UZL64F;
+				DEVELOPMENT_TEAM = 3A5KTMAWHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to function properly";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

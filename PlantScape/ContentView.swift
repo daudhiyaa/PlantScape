@@ -9,9 +9,12 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    
     @Query private var plants: [Plant]
     
+    @StateObject private var detectionResultModel = DetectionResultViewModel()
     @StateObject var multipeerSession: MultipeerSession = MultipeerSession(username: UIDevice.current.name)
+    
     @State private var searchText = ""
     
     let columns = [
@@ -23,14 +26,14 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 
-                Button("Add Plant") {
-                    modelContext.insert(dummyPlants[Int.random(in: 0..<dummyPlants.count)])
-                }
-                Button("Delete All") {
-                    for plant in plants {
-                        modelContext.delete(plant)
-                    }
-                }.foregroundColor(.red)
+                //                Button("Add Plant") {
+                //                    modelContext.insert(plantDataset[Int.random(in: 0..<plantDataset.count)])
+                //                }
+                //                Button("Delete All") {
+                //                    for plant in plants {
+                //                        modelContext.delete(plant)
+                //                    }
+                //                }.foregroundColor(.red)
                 
                 if plants.isEmpty {
                     VStack(spacing: 20) {
@@ -40,13 +43,16 @@ struct ContentView: View {
                             .frame(width: 240)
                         VStack(spacing: 6) {
                             Text("Lets discover a new plant")
-                                .font(.headline)
+                                .font(.title3).fontWeight(.semibold)
                             Text("Scan plants and build your own garden")
-                                .font(.callout)
+                                .font(.body)
                                 .foregroundStyle(Color.gray)
                         }
                         NavigationLink(destination: ScannerView()) {
                             Image(systemName: "camera")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20)
                             Text("Scan")
                         }
                         .fontWeight(.semibold)
@@ -55,7 +61,7 @@ struct ContentView: View {
                         .background(Color.green)
                         .foregroundStyle(.white)
                         .cornerRadius(8)
-                    }
+                    }.padding(28)
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 16, content: {
@@ -71,6 +77,7 @@ struct ContentView: View {
                                             .frame(width: 100)
                                         Text(data.name)
                                             .font(.headline)
+                                            .foregroundStyle(Color.text)
                                     }
                                     .padding()
                                     .frame(height: 180)
@@ -96,13 +103,15 @@ struct ContentView: View {
                 }
             }
         }
+        .environmentObject(detectionResultModel)
         .onChange(of: multipeerSession.receivedPlant) {
-            for plant in dummyPlants {
+            for plant in plantDataset {
                 if(plant.name == multipeerSession.receivedPlant.name) {
                     modelContext.insert(plant)
                 }
             }
         }
+        .tint(Color.green)
     }
     
     var searchResults: [Plant] {

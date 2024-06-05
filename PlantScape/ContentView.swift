@@ -91,6 +91,18 @@ struct ContentView: View {
                     }
                 }
             }
+            .alert("Received an invite from \(multipeerSession.recvdInviteFrom?.displayName ?? "ERR")!", isPresented: $multipeerSession.recvdInvite) {
+                Button("Accept invite") {
+                    if (multipeerSession.invitationHandler != nil) {
+                        multipeerSession.invitationHandler!(true, multipeerSession.session)
+                    }
+                }
+                Button("Reject invite") {
+                    if (multipeerSession.invitationHandler != nil) {
+                        multipeerSession.invitationHandler!(false, nil)
+                    }
+                }
+            }
             .background(Color(UIColor.systemBackground))
             .navigationTitle("Plantdex")
             .navigationBarTitleDisplayMode(.inline)

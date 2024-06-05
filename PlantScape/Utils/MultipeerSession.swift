@@ -9,7 +9,7 @@ import MultipeerConnectivity
 import os
 
 class MultipeerSession: NSObject, ObservableObject {
-    private let serviceType = "exmulti-service"
+    private let serviceType = "plantscape"
     private var myPeerID: MCPeerID
     
     public let serviceAdvertiser: MCNearbyServiceAdvertiser
@@ -19,7 +19,7 @@ class MultipeerSession: NSObject, ObservableObject {
     private let log = Logger()
     
     @Published var availablePeers: [MCPeerID] = []
-    @Published var receivedPlant: Plant = Plant(identifier: "", name: "", desc: "", growingTips: "", image: "")
+    @Published var receivedPlant: Plant = Plant(identifier: "", name: "", desc: "", growingTips: GrowingTips(sun: "", water: ""), image: "", location: "")
     @Published var recvdInvite: Bool = false
     @Published var recvdInviteFrom: MCPeerID? = nil
     @Published var paired: Bool = false
@@ -136,7 +136,18 @@ extension MultipeerSession: MCSessionDelegate {
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         if let string = String(data: data, encoding: .utf8),
-           let plant: Plant? = Plant(identifier: string, name: string, desc: string, growingTips: string, image: string) {
+           let plant: Plant? = 
+            Plant(
+                identifier: string,
+                name: string,
+                desc: string,
+                growingTips: GrowingTips(
+                    sun: string,
+                    water: string
+                ),
+                image: string,
+                location: string
+            ) {
             log.info("didReceive plant \(string)")
             // We received a plant from the other, tell the GameView
             DispatchQueue.main.async {

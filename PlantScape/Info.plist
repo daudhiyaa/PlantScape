@@ -4,8 +4,8 @@
 <dict>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_exmulti-service._tcp</string>
-		<string>_exmulti-service._udp</string>
+		<string>_plantscape._tcp</string>
+		<string>_plantscape._udp</string>
 	</array>
 </dict>
 </plist>

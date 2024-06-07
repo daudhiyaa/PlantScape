@@ -132,25 +132,25 @@ class ARViewController: UIViewController, ARSessionDelegate, ARCoachingOverlayVi
         let name = plantName
         
         // Load both models
-        let momoEntity = try! ModelEntity.loadModel(named: "\(name).usdz")
+        let plantEntity = try! ModelEntity.loadModel(named: "\(name).usdz")
         let cardEntity = try! ModelEntity.loadModel(named: "plantscape-\(name).usdz")
         
         // Generate collision shapes
-        momoEntity.generateCollisionShapes(recursive: true)
+        plantEntity.generateCollisionShapes(recursive: true)
         cardEntity.generateCollisionShapes(recursive: true)
         
-        // Position the cardEntity above the momoEntity
-        let momoBounds = momoEntity.visualBounds(relativeTo: nil)
+        // Position the cardEntity above the plantEntity
+        let plantBounds = plantEntity.visualBounds(relativeTo: nil)
         let cardBounds = cardEntity.visualBounds(relativeTo: nil)
         
         let cardHeight = cardBounds.extents.y
-        let momoHeight = momoBounds.extents.y
+        let plantHeight = plantBounds.extents.y
         
-        cardEntity.position = SIMD3(x: 0, y: momoHeight + cardHeight, z: 0)
+        cardEntity.position = SIMD3(x: 0, y: plantHeight + cardHeight, z: 0)
         
         // Create a parent entity to group both models
         let parentEntity = ModelEntity()
-        parentEntity.addChild(momoEntity)
+        parentEntity.addChild(plantEntity)
         parentEntity.addChild(cardEntity)
         
         // Create an anchor entity and add the parent entity to it
@@ -170,9 +170,9 @@ class ARViewController: UIViewController, ARSessionDelegate, ARCoachingOverlayVi
         
         let results = arView.raycast(from: location, allowing: .existingPlaneInfinite, alignment: .horizontal)
         
-        if let firstResult = results.first, sender.state == .changed {
-            let newTransform = firstResult.worldTransform
-            entity.position = SIMD3(newTransform.columns.3.x, entity.position.y, newTransform.columns.3.z)
+        if let firstResult = results.first {
+            let newPosition = simd_make_float3(firstResult.worldTransform.columns.3)
+            entity.position = newPosition
         }
     }
     

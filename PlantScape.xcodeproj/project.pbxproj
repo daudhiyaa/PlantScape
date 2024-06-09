@@ -12,6 +12,34 @@
 		891CC99E2C09697500376A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC99D2C09697500376A93 /* Assets.xcassets */; };
 		891CC9A12C09697500376A93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC9A02C09697500376A93 /* Preview Assets.xcassets */; };
 		891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CC9AA2C097F2800376A93 /* ScannerView.swift */; };
+		893D252B2C1155AE00A35224 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D252A2C1155AE00A35224 /* CaptureView.swift */; };
+		893D252E2C11574000A35224 /* AppDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D252D2C11574000A35224 /* AppDataModel.swift */; };
+		893D25302C11577400A35224 /* CaptureFolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D252F2C11577400A35224 /* CaptureFolderManager.swift */; };
+		893D25322C1157B000A35224 /* ShotFileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25312C1157B000A35224 /* ShotFileInfo.swift */; };
+		893D25342C11581800A35224 /* TimedMessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25332C11581800A35224 /* TimedMessageList.swift */; };
+		893D25362C1158D300A35224 /* AppDataModelWithState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25352C1158D300A35224 /* AppDataModelWithState.swift */; };
+		893D25382C11590000A35224 /* AppDataModelWithOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25372C11590000A35224 /* AppDataModelWithOrbit.swift */; };
+		893D253A2C11596600A35224 /* FeedbackMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25392C11596600A35224 /* FeedbackMessages.swift */; };
+		893D253D2C1159EC00A35224 /* OnBoardingStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D253C2C1159EC00A35224 /* OnBoardingStateMachine.swift */; };
+		893D253F2C115A3600A35224 /* CapturePrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D253E2C115A3600A35224 /* CapturePrimaryView.swift */; };
+		893D25412C115A5B00A35224 /* CaptureOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25402C115A5B00A35224 /* CaptureOverlayView.swift */; };
+		893D25442C115B7500A35224 /* CaptureOverlayWithComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25432C115B7500A35224 /* CaptureOverlayWithComponent.swift */; };
+		893D25462C115BCE00A35224 /* CaptureOverlayWithLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25452C115BCE00A35224 /* CaptureOverlayWithLocalizedString.swift */; };
+		893D25482C115C1A00A35224 /* TutorialVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25472C115C1A00A35224 /* TutorialVideoView.swift */; };
+		893D254A2C115C2F00A35224 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25492C115C2F00A35224 /* PlayerView.swift */; };
+		893D254C2C115C6900A35224 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D254B2C115C6900A35224 /* FeedbackView.swift */; };
+		893D254E2C115C9D00A35224 /* HelpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D254D2C115C9D00A35224 /* HelpPageView.swift */; };
+		893D25512C115D5400A35224 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25502C115D5400A35224 /* OnBoardingView.swift */; };
+		893D25552C115D9E00A35224 /* OnBoardingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25542C115D9E00A35224 /* OnBoardingTutorialView.swift */; };
+		893D25572C115DD500A35224 /* OnBoardingButtonViewWithLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25562C115DD500A35224 /* OnBoardingButtonViewWithLocalizedString.swift */; };
+		893D25592C115DF200A35224 /* OnBoardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25582C115DF200A35224 /* OnBoardingButtonView.swift */; };
+		893D255B2C115EAE00A35224 /* OnBoardingTutorialViewWithLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D255A2C115EAE00A35224 /* OnBoardingTutorialViewWithLocalizedString.swift */; };
+		893D255D2C115FA700A35224 /* ReconstructionPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D255C2C115FA700A35224 /* ReconstructionPrimaryView.swift */; };
+		893D255F2C115FD800A35224 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D255E2C115FD800A35224 /* ProgressBarView.swift */; };
+		893D25612C1160A400A35224 /* UntilProcessingCompleteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25602C1160A400A35224 /* UntilProcessingCompleteFilter.swift */; };
+		893D25632C11613300A35224 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D25622C11613300A35224 /* ModelView.swift */; };
+		89641ACE2C15D8C200F5B29B /* CaptureCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89641ACD2C15D8C200F5B29B /* CaptureCompletedView.swift */; };
+		89641AD12C15E0D800F5B29B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89641AD02C15E0D800F5B29B /* Router.swift */; };
 		89838FBB2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 89838FBA2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel */; };
 		89838FBD2C0F855B00BC65B0 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FBC2C0F855B00BC65B0 /* ObjectDetectionManager.swift */; };
 		89838FC02C0F858700BC65B0 /* ObjectScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89838FBF2C0F858700BC65B0 /* ObjectScannerDelegate.swift */; };
@@ -35,6 +63,44 @@
 		891CC99D2C09697500376A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		891CC9A02C09697500376A93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		891CC9AA2C097F2800376A93 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		893D252A2C1155AE00A35224 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		893D252D2C11574000A35224 /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
+		893D252F2C11577400A35224 /* CaptureFolderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureFolderManager.swift; sourceTree = "<group>"; };
+		893D25312C1157B000A35224 /* ShotFileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotFileInfo.swift; sourceTree = "<group>"; };
+		893D25332C11581800A35224 /* TimedMessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedMessageList.swift; sourceTree = "<group>"; };
+		893D25352C1158D300A35224 /* AppDataModelWithState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModelWithState.swift; sourceTree = "<group>"; };
+		893D25372C11590000A35224 /* AppDataModelWithOrbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModelWithOrbit.swift; sourceTree = "<group>"; };
+		893D25392C11596600A35224 /* FeedbackMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessages.swift; sourceTree = "<group>"; };
+		893D253C2C1159EC00A35224 /* OnBoardingStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStateMachine.swift; sourceTree = "<group>"; };
+		893D253E2C115A3600A35224 /* CapturePrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePrimaryView.swift; sourceTree = "<group>"; };
+		893D25402C115A5B00A35224 /* CaptureOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayView.swift; sourceTree = "<group>"; };
+		893D25432C115B7500A35224 /* CaptureOverlayWithComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayWithComponent.swift; sourceTree = "<group>"; };
+		893D25452C115BCE00A35224 /* CaptureOverlayWithLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayWithLocalizedString.swift; sourceTree = "<group>"; };
+		893D25472C115C1A00A35224 /* TutorialVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVideoView.swift; sourceTree = "<group>"; };
+		893D25492C115C2F00A35224 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		893D254B2C115C6900A35224 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		893D254D2C115C9D00A35224 /* HelpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPageView.swift; sourceTree = "<group>"; };
+		893D25502C115D5400A35224 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		893D25542C115D9E00A35224 /* OnBoardingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTutorialView.swift; sourceTree = "<group>"; };
+		893D25562C115DD500A35224 /* OnBoardingButtonViewWithLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingButtonViewWithLocalizedString.swift; sourceTree = "<group>"; };
+		893D25582C115DF200A35224 /* OnBoardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingButtonView.swift; sourceTree = "<group>"; };
+		893D255A2C115EAE00A35224 /* OnBoardingTutorialViewWithLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTutorialViewWithLocalizedString.swift; sourceTree = "<group>"; };
+		893D255C2C115FA700A35224 /* ReconstructionPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructionPrimaryView.swift; sourceTree = "<group>"; };
+		893D255E2C115FD800A35224 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		893D25602C1160A400A35224 /* UntilProcessingCompleteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UntilProcessingCompleteFilter.swift; sourceTree = "<group>"; };
+		893D25622C11613300A35224 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		893D25642C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPhone-FixedHeight-1.mp4"; sourceTree = "<group>"; };
+		893D25652C1161C800A35224 /* ScanPasses-iPad-FixedHeight-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPad-FixedHeight-3.mp4"; sourceTree = "<group>"; };
+		893D25662C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPhone-FixedHeight-3.mp4"; sourceTree = "<group>"; };
+		893D25672C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-unflippable-low.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPhone-FixedHeight-unflippable-low.mp4"; sourceTree = "<group>"; };
+		893D25682C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-unflippable-high.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPhone-FixedHeight-unflippable-high.mp4"; sourceTree = "<group>"; };
+		893D25692C1161C800A35224 /* ScanPasses-iPad-FixedHeight-unflippable-low.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPad-FixedHeight-unflippable-low.mp4"; sourceTree = "<group>"; };
+		893D256A2C1161C800A35224 /* ScanPasses-iPad-FixedHeight-unflippable-high.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPad-FixedHeight-unflippable-high.mp4"; sourceTree = "<group>"; };
+		893D256B2C1161C900A35224 /* ScanPasses-iPad-FixedHeight-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPad-FixedHeight-2.mp4"; sourceTree = "<group>"; };
+		893D256C2C1161C900A35224 /* ScanPasses-iPad-FixedHeight-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPad-FixedHeight-1.mp4"; sourceTree = "<group>"; };
+		893D256D2C1161C900A35224 /* ScanPasses-iPhone-FixedHeight-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScanPasses-iPhone-FixedHeight-2.mp4"; sourceTree = "<group>"; };
+		89641ACD2C15D8C200F5B29B /* CaptureCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureCompletedView.swift; sourceTree = "<group>"; };
+		89641AD02C15E0D800F5B29B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		89838FBA2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantDetectionModel.mlmodel; sourceTree = "<group>"; };
 		89838FBC2C0F855B00BC65B0 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
 		89838FBF2C0F858700BC65B0 /* ObjectScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectScannerDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +148,8 @@
 		891CC9982C09697300376A93 /* PlantScape */ = {
 			isa = PBXGroup;
 			children = (
+				893D253B2C1159D500A35224 /* StateMachine */,
+				893D252C2C11573300A35224 /* DataModel */,
 				89838FBE2C0F857000BC65B0 /* Protocol */,
 				89838FB92C0F851F00BC65B0 /* Resource */,
 				89838FB82C0F850400BC65B0 /* Manager */,
@@ -107,11 +175,71 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		893D25292C11559900A35224 /* ObjectCapture */ = {
+			isa = PBXGroup;
+			children = (
+				893D25532C115D7600A35224 /* CaptureOverlay */,
+				893D254F2C115D4600A35224 /* OnBoarding */,
+				893D252A2C1155AE00A35224 /* CaptureView.swift */,
+				893D255C2C115FA700A35224 /* ReconstructionPrimaryView.swift */,
+				893D25622C11613300A35224 /* ModelView.swift */,
+				893D255E2C115FD800A35224 /* ProgressBarView.swift */,
+				893D253E2C115A3600A35224 /* CapturePrimaryView.swift */,
+				893D25472C115C1A00A35224 /* TutorialVideoView.swift */,
+				893D25492C115C2F00A35224 /* PlayerView.swift */,
+				893D254B2C115C6900A35224 /* FeedbackView.swift */,
+				893D254D2C115C9D00A35224 /* HelpPageView.swift */,
+				89641ACD2C15D8C200F5B29B /* CaptureCompletedView.swift */,
+			);
+			path = ObjectCapture;
+			sourceTree = "<group>";
+		};
+		893D252C2C11573300A35224 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				893D252D2C11574000A35224 /* AppDataModel.swift */,
+				893D25352C1158D300A35224 /* AppDataModelWithState.swift */,
+				893D25372C11590000A35224 /* AppDataModelWithOrbit.swift */,
+				893D253C2C1159EC00A35224 /* OnBoardingStateMachine.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		893D253B2C1159D500A35224 /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateMachine;
+			sourceTree = "<group>";
+		};
+		893D254F2C115D4600A35224 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				893D25502C115D5400A35224 /* OnBoardingView.swift */,
+				893D255A2C115EAE00A35224 /* OnBoardingTutorialViewWithLocalizedString.swift */,
+				893D25582C115DF200A35224 /* OnBoardingButtonView.swift */,
+				893D25542C115D9E00A35224 /* OnBoardingTutorialView.swift */,
+				893D25562C115DD500A35224 /* OnBoardingButtonViewWithLocalizedString.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		893D25532C115D7600A35224 /* CaptureOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				893D25402C115A5B00A35224 /* CaptureOverlayView.swift */,
+				893D25432C115B7500A35224 /* CaptureOverlayWithComponent.swift */,
+				893D25452C115BCE00A35224 /* CaptureOverlayWithLocalizedString.swift */,
+			);
+			path = CaptureOverlay;
+			sourceTree = "<group>";
+		};
 		89838FB72C0F84F800BC65B0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				89838FC12C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift */,
 				89838FC32C0F873B00BC65B0 /* DetectionResultViewModel.swift */,
+				893D25332C11581800A35224 /* TimedMessageList.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -120,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				89838FBC2C0F855B00BC65B0 /* ObjectDetectionManager.swift */,
+				893D252F2C11577400A35224 /* CaptureFolderManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -127,6 +256,16 @@
 		89838FB92C0F851F00BC65B0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				893D256C2C1161C900A35224 /* ScanPasses-iPad-FixedHeight-1.mp4 */,
+				893D256B2C1161C900A35224 /* ScanPasses-iPad-FixedHeight-2.mp4 */,
+				893D25652C1161C800A35224 /* ScanPasses-iPad-FixedHeight-3.mp4 */,
+				893D256A2C1161C800A35224 /* ScanPasses-iPad-FixedHeight-unflippable-high.mp4 */,
+				893D25692C1161C800A35224 /* ScanPasses-iPad-FixedHeight-unflippable-low.mp4 */,
+				893D25642C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-1.mp4 */,
+				893D256D2C1161C900A35224 /* ScanPasses-iPhone-FixedHeight-2.mp4 */,
+				893D25662C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-3.mp4 */,
+				893D25682C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-unflippable-high.mp4 */,
+				893D25672C1161C800A35224 /* ScanPasses-iPhone-FixedHeight-unflippable-low.mp4 */,
 				89838FBA2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel */,
 			);
 			path = Resource;
@@ -155,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				B40A017C2C0D56E900D834D9 /* Plant.swift */,
+				893D25312C1157B000A35224 /* ShotFileInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +302,7 @@
 		B40A017B2C0D564F00D834D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				893D25292C11559900A35224 /* ObjectCapture */,
 				89838FC52C0F87A300BC65B0 /* ObjectDetection */,
 				B40A017F2C0D579000D834D9 /* DetailView.swift */,
 				B40A01852C0D715900D834D9 /* SharingView.swift */,
@@ -174,6 +315,9 @@
 			isa = PBXGroup;
 			children = (
 				B40A01812C0D5F9C00D834D9 /* MultipeerSession.swift */,
+				893D25392C11596600A35224 /* FeedbackMessages.swift */,
+				893D25602C1160A400A35224 /* UntilProcessingCompleteFilter.swift */,
+				89641AD02C15E0D800F5B29B /* Router.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -258,21 +402,49 @@
 			files = (
 				B40A01862C0D715900D834D9 /* SharingView.swift in Sources */,
 				B40A01822C0D5F9C00D834D9 /* MultipeerSession.swift in Sources */,
+				893D255B2C115EAE00A35224 /* OnBoardingTutorialViewWithLocalizedString.swift in Sources */,
 				B4DF29302C1085900066054B /* CollectedView.swift in Sources */,
 				89838FC02C0F858700BC65B0 /* ObjectScannerDelegate.swift in Sources */,
+				893D25632C11613300A35224 /* ModelView.swift in Sources */,
+				893D253A2C11596600A35224 /* FeedbackMessages.swift in Sources */,
 				B40A01892C0D7BC200D834D9 /* DummyPlantsData.swift in Sources */,
+				893D253D2C1159EC00A35224 /* OnBoardingStateMachine.swift in Sources */,
 				891CC9AB2C097F2800376A93 /* ScannerView.swift in Sources */,
+				893D25412C115A5B00A35224 /* CaptureOverlayView.swift in Sources */,
+				893D25612C1160A400A35224 /* UntilProcessingCompleteFilter.swift in Sources */,
+				893D25382C11590000A35224 /* AppDataModelWithOrbit.swift in Sources */,
+				89641ACE2C15D8C200F5B29B /* CaptureCompletedView.swift in Sources */,
+				893D25482C115C1A00A35224 /* TutorialVideoView.swift in Sources */,
+				893D25462C115BCE00A35224 /* CaptureOverlayWithLocalizedString.swift in Sources */,
 				89838FBD2C0F855B00BC65B0 /* ObjectDetectionManager.swift in Sources */,
+				893D25552C115D9E00A35224 /* OnBoardingTutorialView.swift in Sources */,
 				89838FC92C0F886A00BC65B0 /* RequestCameraView.swift in Sources */,
+				893D25362C1158D300A35224 /* AppDataModelWithState.swift in Sources */,
 				89838FCB2C0F88DA00BC65B0 /* ScannedPlantView.swift in Sources */,
 				89838FC72C0F87EB00BC65B0 /* ObjectScannerView.swift in Sources */,
+				89641AD12C15E0D800F5B29B /* Router.swift in Sources */,
+				893D25442C115B7500A35224 /* CaptureOverlayWithComponent.swift in Sources */,
 				B40A017D2C0D56E900D834D9 /* Plant.swift in Sources */,
+				893D255F2C115FD800A35224 /* ProgressBarView.swift in Sources */,
+				893D254A2C115C2F00A35224 /* PlayerView.swift in Sources */,
+				893D254E2C115C9D00A35224 /* HelpPageView.swift in Sources */,
+				893D254C2C115C6900A35224 /* FeedbackView.swift in Sources */,
+				893D253F2C115A3600A35224 /* CapturePrimaryView.swift in Sources */,
+				893D25512C115D5400A35224 /* OnBoardingView.swift in Sources */,
+				893D25592C115DF200A35224 /* OnBoardingButtonView.swift in Sources */,
+				893D255D2C115FA700A35224 /* ReconstructionPrimaryView.swift in Sources */,
+				893D252B2C1155AE00A35224 /* CaptureView.swift in Sources */,
+				893D25322C1157B000A35224 /* ShotFileInfo.swift in Sources */,
 				891CC99C2C09697300376A93 /* ContentView.swift in Sources */,
 				89838FC42C0F873B00BC65B0 /* DetectionResultViewModel.swift in Sources */,
 				89838FBB2C0F853D00BC65B0 /* PlantDetectionModel.mlmodel in Sources */,
 				89838FC22C0F85BB00BC65B0 /* ObjectDetectorViewModel.swift in Sources */,
+				893D25342C11581800A35224 /* TimedMessageList.swift in Sources */,
+				893D25572C115DD500A35224 /* OnBoardingButtonViewWithLocalizedString.swift in Sources */,
+				893D25302C11577400A35224 /* CaptureFolderManager.swift in Sources */,
 				B40A01802C0D579000D834D9 /* DetailView.swift in Sources */,
 				891CC99A2C09697300376A93 /* PlantScapeApp.swift in Sources */,
+				893D252E2C11574000A35224 /* AppDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,11 +581,13 @@
 				DEVELOPMENT_TEAM = 3A5KTMAWHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantScape/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to function properly";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "PlantScape uses local network to sharing PlantDex between users";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -440,11 +614,13 @@
 				DEVELOPMENT_TEAM = 3A5KTMAWHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlantScape/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to function properly";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "PlantScape uses local network to sharing PlantDex between users";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

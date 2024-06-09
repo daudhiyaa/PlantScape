@@ -9,7 +9,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    
+    @EnvironmentObject var router: Router
     @Query private var plants: [Plant]
     
     @StateObject private var detectionResultModel = DetectionResultViewModel()
@@ -23,18 +23,8 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             VStack {
-                
-                //                Button("Add Plant") {
-                //                    modelContext.insert(plantDataset[Int.random(in: 0..<plantDataset.count)])
-                //                }
-                //                Button("Delete All") {
-                //                    for plant in plants {
-                //                        modelContext.delete(plant)
-                //                    }
-                //                }.foregroundColor(.red)
-                
                 if plants.isEmpty {
                     VStack(spacing: 20) {
                         Image("image/planticon")
@@ -116,6 +106,7 @@ struct ContentView: View {
             }
         }
         .environmentObject(detectionResultModel)
+        .environmentObject(router)
         .onChange(of: multipeerSession.receivedPlant) {
             for plant in plantDataset {
                 if(plant.name == multipeerSession.receivedPlant.name) {

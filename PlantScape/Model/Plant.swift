@@ -17,8 +17,9 @@ class Plant: Hashable {
     var growingTips: GrowingTips
     var image: String
     var location: String
+    var modelUrl: URL?
     
-    init(id: UUID = UUID(), identifier: String, name: String, desc: String, growingTips: GrowingTips, image: String, location: String) {
+    init(id: UUID = UUID(), identifier: String, name: String, desc: String, growingTips: GrowingTips, image: String, location: String, modelUrl: URL? = nil) {
         self.id = id
         self.identifier = identifier
         self.name = name
@@ -26,6 +27,7 @@ class Plant: Hashable {
         self.growingTips = growingTips
         self.image = image
         self.location = location
+        self.modelUrl = modelUrl
     }
 }
 

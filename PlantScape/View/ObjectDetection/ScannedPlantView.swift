@@ -12,13 +12,15 @@ struct ScannedPlantView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
     
-    @EnvironmentObject var plantdexModel: DetectionResultViewModel
+    @EnvironmentObject var detectionResultModel: DetectionResultViewModel
+    @EnvironmentObject var router: Router
     
     @Query private var plants: [Plant]
     
     let scanType: ScannedItemType
     
     @State private var plant: Plant?
+    @Binding var isShowingCaptureView: Bool
     
     var body: some View {
         NavigationView {
@@ -71,13 +73,10 @@ struct ScannedPlantView: View {
                     Spacer()
                     VStack {
                         Button(action: {
-                            if(plant != nil && !plants.contains(plant!)) {
-                                modelContext.insert(plant!)
-                            }
-                            dismiss()
+                            detectionResultModel.scannedItemView = nil
+                            isShowingCaptureView = true
                         }, label: {
-                            Text("Collect")
-                                .frame(maxWidth: .infinity)
+                            Text("Collect").frame(maxWidth: .infinity)
                         })
                         .fontWeight(.semibold)
                         .padding(.horizontal, 24)
@@ -105,18 +104,19 @@ struct ScannedPlantView: View {
         .onAppear {
             setupDetails()
         }
+        .environmentObject(router)
     }
     
     private func setupDetails() {
         switch scanType {
         case .produce(let prediction):
-            self.plant = plantdexModel.plant(for: prediction.identifier)
+            self.plant = detectionResultModel.plant(for: prediction.identifier)
         }
     }
 }
 
-#Preview {
-    ScannedPlantView(scanType: .produce(.init(identifier: "Matahari")))
-        .environmentObject(DetectionResultViewModel())
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    ScannedPlantView(scanType: .produce(.init(identifier: "Matahari")))
+//        .environmentObject(DetectionResultViewModel())
+//        .preferredColorScheme(.dark)
+//}

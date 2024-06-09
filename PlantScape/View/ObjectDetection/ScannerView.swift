@@ -10,12 +10,15 @@ import SwiftUI
 struct ScannerView: View {
     @StateObject private var detectorModel = ObjectDetectorViewModel()
     @EnvironmentObject var detectionResultModel: DetectionResultViewModel
+    @EnvironmentObject var router: Router
+    
+    @State var isShowingCaptureView = false
     
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottomLeading) {
                 Color.black.ignoresSafeArea()
-                if detectorModel.deviceIsAvailable() {
+                if detectorModel.deviceIsAvailable() && !isShowingCaptureView {
                     ObjectScannerView(detectorModel: detectorModel)
                         .ignoresSafeArea()
                 }
@@ -29,6 +32,14 @@ struct ScannerView: View {
                 }
             }
         }
+        .overlay(content: {
+            NavigationLink(destination: CaptureView(), isActive: $isShowingCaptureView) {}.hidden()
+//            NavigationLink(value: Route.scannerView()) {
+//                
+//            }.navigationDestination(for: Route.self) { route in
+//                <#code#>
+//            }
+        })
         .onAppear {
             detectorModel.setObjectDelegate(detectionResultModel)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
@@ -39,16 +50,22 @@ struct ScannerView: View {
             CameraPermissionView(dectectorModel: detectorModel)
         }
         .sheet(item: $detectionResultModel.scannedItemView) { type in
-            ScannedPlantView(scanType: type)
+            ScannedPlantView(scanType: type, isShowingCaptureView: $isShowingCaptureView)
                 .onAppear {
                     detectorModel.stopSession()
                 }
                 .onDisappear {
-                    detectorModel.restartSession()
+                    if(isShowingCaptureView == true) {
+                        detectorModel.stopScanning()
+                        isShowingCaptureView = false
+                    } else {
+                        detectorModel.restartSession()
+                    }
                 }
                 .interactiveDismissDisabled()
         }
         .environmentObject(detectionResultModel)
+        .environmentObject(router)
     }
     
     var header: some View {

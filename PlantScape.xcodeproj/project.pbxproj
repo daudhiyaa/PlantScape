@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4320121D2C16ECD2006D4441 /* plantscape-Ylang-Ylang.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 432012152C16ECD1006D4441 /* plantscape-Ylang-Ylang.usdz */; };
+		4320121E2C16ECD2006D4441 /* plantscape-Orchid.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 432012162C16ECD1006D4441 /* plantscape-Orchid.usdz */; };
+		4320121F2C16ECD2006D4441 /* plantscape-Sunflower.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 432012172C16ECD1006D4441 /* plantscape-Sunflower.usdz */; };
+		432012202C16ECD2006D4441 /* plantscape-Aster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 432012182C16ECD1006D4441 /* plantscape-Aster.usdz */; };
+		432012212C16ECD2006D4441 /* plantscape-Calathea.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 432012192C16ECD1006D4441 /* plantscape-Calathea.usdz */; };
+		432012222C16ECD2006D4441 /* plantscape-Coleus.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4320121A2C16ECD2006D4441 /* plantscape-Coleus.usdz */; };
+		432012232C16ECD2006D4441 /* plantscape-Holiday Cactus.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4320121B2C16ECD2006D4441 /* plantscape-Holiday Cactus.usdz */; };
+		432012242C16ECD2006D4441 /* plantscape-Butterfly Plant.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4320121C2C16ECD2006D4441 /* plantscape-Butterfly Plant.usdz */; };
 		43261A6F2C12EB6500E6B553 /* ARViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261A6E2C12EB6500E6B553 /* ARViewControllerRepresentable.swift */; };
 		43261A722C12EC8300E6B553 /* Jasmine.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 43261A702C12EC8200E6B553 /* Jasmine.usdz */; };
 		43261A732C12EC8300E6B553 /* plantscape-Jasmine.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */; };
@@ -60,6 +68,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		432012152C16ECD1006D4441 /* plantscape-Ylang-Ylang.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Ylang-Ylang.usdz"; sourceTree = "<group>"; };
+		432012162C16ECD1006D4441 /* plantscape-Orchid.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Orchid.usdz"; sourceTree = "<group>"; };
+		432012172C16ECD1006D4441 /* plantscape-Sunflower.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Sunflower.usdz"; sourceTree = "<group>"; };
+		432012182C16ECD1006D4441 /* plantscape-Aster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Aster.usdz"; sourceTree = "<group>"; };
+		432012192C16ECD1006D4441 /* plantscape-Calathea.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Calathea.usdz"; sourceTree = "<group>"; };
+		4320121A2C16ECD2006D4441 /* plantscape-Coleus.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Coleus.usdz"; sourceTree = "<group>"; };
+		4320121B2C16ECD2006D4441 /* plantscape-Holiday Cactus.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Holiday Cactus.usdz"; sourceTree = "<group>"; };
+		4320121C2C16ECD2006D4441 /* plantscape-Butterfly Plant.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Butterfly Plant.usdz"; sourceTree = "<group>"; };
 		43261A6E2C12EB6500E6B553 /* ARViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		43261A702C12EC8200E6B553 /* Jasmine.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Jasmine.usdz; sourceTree = "<group>"; };
 		43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Jasmine.usdz"; sourceTree = "<group>"; };
@@ -173,8 +189,6 @@
 				B40A017E2C0D56FD00D834D9 /* Utils */,
 				B40A017B2C0D564F00D834D9 /* View */,
 				891CC99D2C09697500376A93 /* Assets.xcassets */,
-				43261A702C12EC8200E6B553 /* Jasmine.usdz */,
-				43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */,
 				891CC9992C09697300376A93 /* PlantScapeApp.swift */,
 				891CC99B2C09697300376A93 /* ContentView.swift */,
 				B40A01832C0D5FC900D834D9 /* Info.plist */,
@@ -272,6 +286,16 @@
 		89838FB92C0F851F00BC65B0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				43261A702C12EC8200E6B553 /* Jasmine.usdz */,
+				43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */,
+				432012182C16ECD1006D4441 /* plantscape-Aster.usdz */,
+				4320121C2C16ECD2006D4441 /* plantscape-Butterfly Plant.usdz */,
+				432012192C16ECD1006D4441 /* plantscape-Calathea.usdz */,
+				4320121A2C16ECD2006D4441 /* plantscape-Coleus.usdz */,
+				4320121B2C16ECD2006D4441 /* plantscape-Holiday Cactus.usdz */,
+				432012162C16ECD1006D4441 /* plantscape-Orchid.usdz */,
+				432012172C16ECD1006D4441 /* plantscape-Sunflower.usdz */,
+				432012152C16ECD1006D4441 /* plantscape-Ylang-Ylang.usdz */,
 				893D256C2C1161C900A35224 /* ScanPasses-iPad-FixedHeight-1.mp4 */,
 				893D256B2C1161C900A35224 /* ScanPasses-iPad-FixedHeight-2.mp4 */,
 				893D25652C1161C800A35224 /* ScanPasses-iPad-FixedHeight-3.mp4 */,
@@ -405,10 +429,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432012202C16ECD2006D4441 /* plantscape-Aster.usdz in Resources */,
+				432012222C16ECD2006D4441 /* plantscape-Coleus.usdz in Resources */,
 				891CC9A12C09697500376A93 /* Preview Assets.xcassets in Resources */,
 				891CC99E2C09697500376A93 /* Assets.xcassets in Resources */,
+				432012232C16ECD2006D4441 /* plantscape-Holiday Cactus.usdz in Resources */,
+				4320121D2C16ECD2006D4441 /* plantscape-Ylang-Ylang.usdz in Resources */,
 				43261A732C12EC8300E6B553 /* plantscape-Jasmine.usdz in Resources */,
+				4320121F2C16ECD2006D4441 /* plantscape-Sunflower.usdz in Resources */,
 				43261A722C12EC8300E6B553 /* Jasmine.usdz in Resources */,
+				4320121E2C16ECD2006D4441 /* plantscape-Orchid.usdz in Resources */,
+				432012212C16ECD2006D4441 /* plantscape-Calathea.usdz in Resources */,
+				432012242C16ECD2006D4441 /* plantscape-Butterfly Plant.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,7 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantScape/Preview Content\"";
-				DEVELOPMENT_TEAM = 3A5KTMAWHU;
+				DEVELOPMENT_TEAM = D549JV5ACX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantScape/Info.plist;
@@ -631,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantScape/Preview Content\"";
-				DEVELOPMENT_TEAM = 3A5KTMAWHU;
+				DEVELOPMENT_TEAM = D549JV5ACX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantScape/Info.plist;

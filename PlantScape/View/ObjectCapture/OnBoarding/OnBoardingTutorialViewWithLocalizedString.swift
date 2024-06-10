@@ -53,7 +53,7 @@ extension OnboardingTutorialView {
         static let firstSegmentCompleteDetailText = NSLocalizedString(
             "For best quality, capture three segments. (Review, Object Capture, 1st Segment)",
             bundle: AppDataModel.bundleForLocalizedStrings,
-            value: "For best quality, caputure three segments.",
+            value: "For best quality, capture three segments.",
             comment: "Feedback for when user has finished capturing first segment."
         )
 

@@ -8,6 +8,7 @@
 import SwiftUI
 import ARKit
 import RealityKit
+import FocusEntity
 
 struct ARViewControllerRepresentable: UIViewControllerRepresentable {
     var plantName: String
@@ -130,9 +131,16 @@ class ARViewController: UIViewController, ARSessionDelegate, ARCoachingOverlayVi
         
         let name = plantName
         
-        // Load both models
-        let plantEntity = try! ModelEntity.loadModel(named: "\(name).usdz")
+        // Load models from local storage
+        guard let plantURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Images/Models/\(name).usdz") else {
+            print("Failed to find USDZ files in local storage.")
+            return
+        }
+        
         let cardEntity = try! ModelEntity.loadModel(named: "plantscape-\(name).usdz")
+        
+        let plantEntity = try! ModelEntity.load(contentsOf: plantURL)
+//        let cardEntity = try! ModelEntity.load(contentsOf: cardURL)
         
         // Generate collision shapes
         plantEntity.generateCollisionShapes(recursive: true)

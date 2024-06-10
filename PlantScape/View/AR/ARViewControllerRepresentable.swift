@@ -8,7 +8,6 @@
 import SwiftUI
 import ARKit
 import RealityKit
-import FocusEntity
 
 struct ARViewControllerRepresentable: UIViewControllerRepresentable {
     var plantName: String

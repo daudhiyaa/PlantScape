@@ -46,6 +46,13 @@ struct DetailView: View {
                                 }
                             }
                         }
+                        GroupBox("Model URL") {
+                            GroupBox {
+                                VStack() {
+                                    Text(plant.modelUrl?.absoluteString ?? "").frame(maxWidth: .infinity, alignment: .leading)
+                                }
+                            }
+                        }
                         GroupBox("Location") {
                             GroupBox {
                                 VStack(alignment: .leading) {

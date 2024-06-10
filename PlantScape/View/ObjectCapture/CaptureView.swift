@@ -49,7 +49,7 @@ struct CaptureView: View {
         }
         .sheet(isPresented: $showReconstructionView) {
             if let folderManager = appModel.scanFolderManager {
-                ReconstructionPrimaryView(outputFile: folderManager.modelsFolder.appendingPathComponent("\(plant?.name.split(separator: " ").joined(separator: "-") ?? defaultFileName).usdz"))
+                ReconstructionPrimaryView(outputFile: folderManager.modelsFolder.appendingPathComponent("\(plant?.name ?? defaultFileName).usdz"), showReconstructionView: $showReconstructionView)
             }
         }
         .alert(

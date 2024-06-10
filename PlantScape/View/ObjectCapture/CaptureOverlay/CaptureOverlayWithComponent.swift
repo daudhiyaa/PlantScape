@@ -161,7 +161,7 @@ extension CaptureOverlayView {
             .padding(.horizontal, 10)
             .sheet(isPresented: $showDocumentBrowser,
                    onDismiss: { showDocumentBrowser = false },
-                   content: { DocumentBrowser(startingDir: appModel.scanFolderManager.rootScanFolder) })
+                   content: { DocumentBrowser(startingDir: appModel.scanFolderManager.modelsFolder) })
         }
     }
 

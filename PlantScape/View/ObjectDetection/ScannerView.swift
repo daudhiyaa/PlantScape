@@ -33,7 +33,12 @@ struct ScannerView: View {
             }
         }
         .overlay(content: {
-            NavigationLink(destination: CaptureView(), isActive: $isShowingCaptureView) {}.hidden()
+//            Button(action: {
+//                
+//            }, label: {
+//                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+//            })
+//            NavigationLink(destination: CaptureView(), isActive: $isShowingCaptureView) {}.hidden()
 //            NavigationLink(value: Route.scannerView()) {
 //                
 //            }.navigationDestination(for: Route.self) { route in
@@ -58,6 +63,7 @@ struct ScannerView: View {
                     if(isShowingCaptureView == true) {
                         detectorModel.stopScanning()
                         isShowingCaptureView = false
+                        router.path.append(NavigationDestination.captureView)
                     } else {
                         detectorModel.restartSession()
                     }
@@ -66,6 +72,7 @@ struct ScannerView: View {
         }
         .environmentObject(detectionResultModel)
         .environmentObject(router)
+       
     }
     
     var header: some View {

@@ -31,7 +31,7 @@ struct ProgressBarView: View {
     private var numOfImages: Int {
         guard let folderManager = appModel.scanFolderManager else { return 0 }
         guard let urls = try? FileManager.default.contentsOfDirectory(
-            at: folderManager.imagesFolder,
+            at: folderManager.modelsFolder,
             includingPropertiesForKeys: nil
         ) else {
             return 0

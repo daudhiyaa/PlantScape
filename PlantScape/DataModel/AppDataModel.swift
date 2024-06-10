@@ -190,7 +190,7 @@ class AppDataModel: ObservableObject, Identifiable {
         logger.log("Enabling overcapture...")
 
         // Starts the initial segment and sets the output locations.
-        session.start(imagesDirectory: scanFolderManager.imagesFolder,
+        session.start(imagesDirectory: scanFolderManager.modelsFolder,
                       configuration: configuration)
 
         if case let .failed(error) = session.state {
@@ -221,7 +221,7 @@ class AppDataModel: ObservableObject, Identifiable {
         var configuration = PhotogrammetrySession.Configuration()
         configuration.checkpointDirectory = scanFolderManager.snapshotsFolder
         photogrammetrySession = try PhotogrammetrySession(
-            input: scanFolderManager.imagesFolder,
+            input: scanFolderManager.modelsFolder,
             configuration: configuration)
 
         state = .reconstructing

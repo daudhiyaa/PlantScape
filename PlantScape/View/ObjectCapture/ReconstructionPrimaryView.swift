@@ -24,22 +24,30 @@ struct ReconstructionPrimaryView: View {
     @State private var cancelled: Bool = false
     @State var plant: Plant?
     
+    @Binding var showReconstructionView: Bool
+    
     var body: some View {
         VStack {
             if completed && !cancelled {
                 VStack {
                     Spacer()
-                    Button {
-                        router.reset()
-                        dismiss()
-                    } label: {
-                        Text("Back to plant dex button")
-                    }.fontWeight(.semibold)
-                        .padding(.horizontal, 24)
-                        .padding(.vertical, 12)
-                        .background(Color.green)
-                        .foregroundStyle(.white)
-                        .cornerRadius(8)
+                    Image(systemName: "checkmark.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80)
+                        .foregroundStyle(Color.green)
+                        
+//                    Button {
+//                        router.reset()
+//                        dismiss()
+//                    } label: {
+//                        Text("Back to plant dex button")
+//                    }.fontWeight(.semibold)
+//                        .padding(.horizontal, 24)
+//                        .padding(.vertical, 12)
+//                        .background(Color.green)
+//                        .foregroundStyle(.white)
+//                        .cornerRadius(8)
 
                     Spacer()
                 }
@@ -48,7 +56,7 @@ struct ReconstructionPrimaryView: View {
                 ReconstructionProgressView(outputFile: outputFile,
                                            completed: $completed,
                                            cancelled: $cancelled,
-                                           plant: $plant )
+                                           plant: $plant, showReconstructionView: $showReconstructionView )
                 .onAppear(perform: {
                     setupDetails()
                     UIApplication.shared.isIdleTimerDisabled = true
@@ -82,11 +90,13 @@ struct ReconstructionProgressView: View {
     
     @EnvironmentObject var appModel: AppDataModel
     @EnvironmentObject var detectionResultModel: DetectionResultViewModel
+    @EnvironmentObject var router: Router
     
     let outputFile: URL
     @Binding var completed: Bool
     @Binding var cancelled: Bool
     @Binding var plant: Plant?
+    @Binding var showReconstructionView: Bool
     
     @State private var progress: Float = 0
     @State private var estimatedRemainingTime: TimeInterval?
@@ -199,12 +209,14 @@ struct ReconstructionProgressView: View {
                         withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
                             completed = true
                         }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            router.reset()
+                            showReconstructionView = false
+                        }
                         appModel.state = .viewing
                     }
                 case .processingCancelled:
-                    withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
-                        cancelled = true
-                    }
+                    cancelled = true
                     appModel.state = .restart
                 case .invalidSample(id: _, reason: _), .skippedSample(id: _), .automaticDownsampling:
                     continue
@@ -217,6 +229,10 @@ struct ReconstructionProgressView: View {
             if (!gotError) {
                 withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
                     completed = true
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    router.reset()
+                    showReconstructionView = false
                 }
                 appModel.state = .viewing
                 if let p = plant {

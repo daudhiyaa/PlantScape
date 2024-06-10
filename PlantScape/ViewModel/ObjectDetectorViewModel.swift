@@ -23,7 +23,7 @@ final class ObjectDetectorViewModel: NSObject, ObservableObject {
     
     private let detectionManager = ObjectDetectionManager()
     
-    private let session = AVCaptureSession()
+    private var session: AVCaptureSession?
     private var captureOutput: AVCapturePhotoOutput!
     private var device: AVCaptureDevice!
     
@@ -76,18 +76,20 @@ final class ObjectDetectorViewModel: NSObject, ObservableObject {
         }
         
         do {
+            session = AVCaptureSession()
+            session!.beginConfiguration()
             let input = try AVCaptureDeviceInput(device: device)
-            session.beginConfiguration()
+            print("input: \(input)")
             
-            guard session.canAddInput(input) else {
+            guard session!.canAddInput(input) else {
                 print("Input cannot be added")
                 return
             }
             
-            session.addInput(input)
+            session!.addInput(input)
             
             DispatchQueue.main.async {
-                let preview = AVCaptureVideoPreviewLayer(session: self.session)
+                let preview = AVCaptureVideoPreviewLayer(session: self.session!)
                 preview.frame = self.view.frame
                 preview.videoGravity = .resizeAspectFill
                 
@@ -96,7 +98,7 @@ final class ObjectDetectorViewModel: NSObject, ObservableObject {
             
             createVideoOutput()
             
-            session.commitConfiguration()
+            session!.commitConfiguration()
             
         } catch {
             print(error.localizedDescription)
@@ -109,22 +111,22 @@ final class ObjectDetectorViewModel: NSObject, ObservableObject {
         let output = AVCaptureVideoDataOutput()
         output.setSampleBufferDelegate(self, queue: .global(qos: .userInitiated))
         
-        guard session.canAddOutput(output) else {
+        guard session!.canAddOutput(output) else {
             print("Video Data Output cannot be added")
             return
         }
         
-        session.addOutput(output)
+        session!.addOutput(output)
         
         self.captureOutput = AVCapturePhotoOutput()
         print(captureOutput.description)
         
-        guard session.canAddOutput(captureOutput) else {
+        guard session!.canAddOutput(captureOutput) else {
             print("Capture output cannot be added")
             return
         }
         
-        session.addOutput(captureOutput)
+        session!.addOutput(captureOutput)
     }
     
     func requestAccess() {
@@ -156,7 +158,7 @@ final class ObjectDetectorViewModel: NSObject, ObservableObject {
     
     func restartSession() {
         DispatchQueue.global(qos: .background).async {
-            self.session.startRunning()
+            self.session!.startRunning()
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 print("Scanning restarted")
                 self.detectionManager.continueScanning = true
@@ -171,7 +173,16 @@ final class ObjectDetectorViewModel: NSObject, ObservableObject {
     
     func stopSession() {
         DispatchQueue.global(qos: .background).async {
-            self.session.stopRunning()
+            self.session!.stopRunning()
+        }
+    }
+    
+    func stopScanning() {
+        DispatchQueue.main.async {
+            withAnimation {
+                self.detectionManager.continueScanning = false
+                self.session!.stopRunning()
+            }
         }
     }
 }

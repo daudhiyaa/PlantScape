@@ -22,6 +22,7 @@ enum ScannedItemType: Identifiable {
 final class DetectionResultViewModel: ObservableObject {
     @Published var isShowingPlantdexView = false
     @Published var scannedItemView: ScannedItemType?
+    @Published var scannedPlant: ScannedItemType?
     @Published var plants: [Plant] = []
 
     private var plantDictionary: [String: Plant] = [:]
@@ -48,6 +49,7 @@ extension DetectionResultViewModel: ObjectScannerDelegate {
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.scannedItemView = .produce(prediction)
+            self.scannedPlant = .produce(prediction)
         }
     }
 }

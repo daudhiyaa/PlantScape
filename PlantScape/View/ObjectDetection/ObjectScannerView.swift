@@ -24,7 +24,7 @@ struct ObjectScannerView: View {
                 Text("Place plant within view")
                     .font(.headline)
                 if detectorModel.didDetectObject {
-                    Text("Detecting object...")
+                    Text("Detecting plant...")
                         .font(.headline)
                         .padding(.top, 7)
                 }

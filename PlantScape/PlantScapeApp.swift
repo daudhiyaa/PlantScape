@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct PlantScapeApp: App {
+    static let subsystem: String = "com.example.PlantScape"
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Plant.self
@@ -23,9 +25,12 @@ struct PlantScapeApp: App {
         }
     }()
     
+    @StateObject var router = Router()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(router)
         }
         .modelContainer(sharedModelContainer)
     }

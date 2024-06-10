@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43261A6F2C12EB6500E6B553 /* ARViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43261A6E2C12EB6500E6B553 /* ARViewControllerRepresentable.swift */; };
+		43261A722C12EC8300E6B553 /* Jasmine.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 43261A702C12EC8200E6B553 /* Jasmine.usdz */; };
+		43261A732C12EC8300E6B553 /* plantscape-Jasmine.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */; };
 		891CC99A2C09697300376A93 /* PlantScapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CC9992C09697300376A93 /* PlantScapeApp.swift */; };
 		891CC99C2C09697300376A93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891CC99B2C09697300376A93 /* ContentView.swift */; };
 		891CC99E2C09697500376A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891CC99D2C09697500376A93 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43261A6E2C12EB6500E6B553 /* ARViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		43261A702C12EC8200E6B553 /* Jasmine.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Jasmine.usdz; sourceTree = "<group>"; };
+		43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "plantscape-Jasmine.usdz"; sourceTree = "<group>"; };
 		891CC9962C09697300376A93 /* PlantScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		891CC9992C09697300376A93 /* PlantScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantScapeApp.swift; sourceTree = "<group>"; };
 		891CC99B2C09697300376A93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43261A742C12ED3E00E6B553 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				43261A6E2C12EB6500E6B553 /* ARViewControllerRepresentable.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		891CC98D2C09697300376A93 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +173,8 @@
 				B40A017E2C0D56FD00D834D9 /* Utils */,
 				B40A017B2C0D564F00D834D9 /* View */,
 				891CC99D2C09697500376A93 /* Assets.xcassets */,
+				43261A702C12EC8200E6B553 /* Jasmine.usdz */,
+				43261A712C12EC8200E6B553 /* plantscape-Jasmine.usdz */,
 				891CC9992C09697300376A93 /* PlantScapeApp.swift */,
 				891CC99B2C09697300376A93 /* ContentView.swift */,
 				B40A01832C0D5FC900D834D9 /* Info.plist */,
@@ -304,6 +320,7 @@
 			children = (
 				893D25292C11559900A35224 /* ObjectCapture */,
 				89838FC52C0F87A300BC65B0 /* ObjectDetection */,
+				43261A742C12ED3E00E6B553 /* AR */,
 				B40A017F2C0D579000D834D9 /* DetailView.swift */,
 				B40A01852C0D715900D834D9 /* SharingView.swift */,
 				B4DF292F2C1085900066054B /* CollectedView.swift */,
@@ -390,6 +407,8 @@
 			files = (
 				891CC9A12C09697500376A93 /* Preview Assets.xcassets in Resources */,
 				891CC99E2C09697500376A93 /* Assets.xcassets in Resources */,
+				43261A732C12EC8300E6B553 /* plantscape-Jasmine.usdz in Resources */,
+				43261A722C12EC8300E6B553 /* Jasmine.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +443,7 @@
 				89838FC72C0F87EB00BC65B0 /* ObjectScannerView.swift in Sources */,
 				89641AD12C15E0D800F5B29B /* Router.swift in Sources */,
 				893D25442C115B7500A35224 /* CaptureOverlayWithComponent.swift in Sources */,
+				43261A6F2C12EB6500E6B553 /* ARViewControllerRepresentable.swift in Sources */,
 				B40A017D2C0D56E900D834D9 /* Plant.swift in Sources */,
 				893D255F2C115FD800A35224 /* ProgressBarView.swift in Sources */,
 				893D254A2C115C2F00A35224 /* PlayerView.swift in Sources */,
@@ -578,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantScape/Preview Content\"";
-				DEVELOPMENT_TEAM = 3A5KTMAWHU;
+				DEVELOPMENT_TEAM = D549JV5ACX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantScape/Info.plist;
@@ -611,7 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantScape/Preview Content\"";
-				DEVELOPMENT_TEAM = 3A5KTMAWHU;
+				DEVELOPMENT_TEAM = D549JV5ACX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantScape/Info.plist;

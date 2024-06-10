@@ -65,22 +65,20 @@ struct DetailView: View {
                 VStack {
                     Spacer()
                     VStack {
-                        Button(action: {
-                            // TODO: Scan 360
-                        }, label: {
+                        NavigationLink(destination: ARViewControllerRepresentable(plantName: plant.name)) {
                             Text("AR View")
                                 .frame(maxWidth: .infinity)
-                        })
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 24)
-                        .padding(.vertical, 12)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                        .padding(.horizontal, 28)
-                        .padding(.bottom, 28)
-                        .padding(.top, 16)
-                        .background(Color(UIColor.systemBackground))
+                                .fontWeight(.semibold)
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 12)
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                                .padding(.horizontal, 28)
+                                .padding(.bottom, 28)
+                                .padding(.top, 16)
+                                .background(Color(UIColor.systemBackground))
+                        }
                     }
                 }
             )

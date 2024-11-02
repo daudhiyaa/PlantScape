@@ -20,7 +20,7 @@ class CaptureFolderManager: ObservableObject {
     let rootScanFolder: URL
 
     // Subdirectory of `rootScanFolder` for images
-//    let imagesFolder: URL
+    let imagesFolder: URL
 
     // Subdirectory of `rootScanFolder` for snapshots
     let snapshotsFolder: URL
@@ -38,10 +38,10 @@ class CaptureFolderManager: ObservableObject {
         rootScanFolder = newFolder
 
         // Creates the subdirectories.
-//        imagesFolder = newFolder.appendingPathComponent("Images/")
-//        guard CaptureFolderManager.createDirectoryRecursively(imagesFolder) else {
-//            return nil
-//        }
+        imagesFolder = newFolder.appendingPathComponent("Images/")
+        guard CaptureFolderManager.createDirectoryRecursively(imagesFolder) else {
+            return nil
+        }
 
         snapshotsFolder = newFolder.appendingPathComponent("Snapshots/")
         guard CaptureFolderManager.createDirectoryRecursively(snapshotsFolder) else {
@@ -60,7 +60,7 @@ class CaptureFolderManager: ObservableObject {
         var newShots: [ShotFileInfo] = []
 
         let imgUrls = try FileManager.default
-            .contentsOfDirectory(at: modelsFolder,
+            .contentsOfDirectory(at: imagesFolder,
                                  includingPropertiesForKeys: [],
                                  options: [.skipsHiddenFiles])
             .filter { $0.isFileURL
@@ -135,7 +135,10 @@ class CaptureFolderManager: ObservableObject {
             return nil
         }
 
+        let formatter = ISO8601DateFormatter()
+        let timestamp = formatter.string(from: Date())
         let newCaptureDir = capturesFolder
+            .appendingPathComponent(timestamp, isDirectory: true)
 
         logger.log("Creating capture path: \"\(String(describing: newCaptureDir))\"")
         let capturePath = newCaptureDir.path
@@ -205,7 +208,6 @@ class CaptureFolderManager: ObservableObject {
                                              appropriateFor: nil, create: false) else {
             return nil
         }
-        return documentsFolder.appendingPathComponent("Images/", isDirectory: true)
+        return documentsFolder.appendingPathComponent("Scans/", isDirectory: true)
     }
 }
-

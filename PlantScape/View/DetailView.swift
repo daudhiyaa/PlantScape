@@ -72,7 +72,7 @@ struct DetailView: View {
                 VStack {
                     Spacer()
                     VStack {
-                        NavigationLink(destination: ARViewControllerRepresentable(plantName: plant.name)) {
+                        NavigationLink(destination: ARViewControllerRepresentable(plantModelUrl: plant.modelUrl?.absoluteString ?? "")) {
                             Text("AR View")
                                 .frame(maxWidth: .infinity)
                                 .fontWeight(.semibold)

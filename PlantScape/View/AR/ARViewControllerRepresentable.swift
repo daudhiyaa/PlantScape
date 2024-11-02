@@ -8,14 +8,13 @@
 import SwiftUI
 import ARKit
 import RealityKit
-import FocusEntity
 
 struct ARViewControllerRepresentable: UIViewControllerRepresentable {
-    var plantName: String
+    var plantModelUrl: String
     
     func makeUIViewController(context: Context) -> ARViewController {
         let arViewController = ARViewController()
-        arViewController.plantName = plantName
+        arViewController.plantModelUrl = plantModelUrl
         return arViewController
     }
     
@@ -29,7 +28,7 @@ class ARViewController: UIViewController, ARSessionDelegate, ARCoachingOverlayVi
     var coachingOverlay = ARCoachingOverlayView()
     var selectedEntity: ModelEntity?
     var initialScale: SIMD3<Float>?
-    var plantName: String = ""
+    var plantModelUrl: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,18 +128,19 @@ class ARViewController: UIViewController, ARSessionDelegate, ARCoachingOverlayVi
         let anchor = ARAnchor(name: "objectAnchor", transform: raycastResult.worldTransform)
         arView.session.add(anchor: anchor)
         
-        let name = plantName
+        let name = plantModelUrl.components(separatedBy: "Documents/").last ?? ""
         
         // Load models from local storage
-        guard let plantURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Images/Models/\(name).usdz") else {
+        guard let plantURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("\(name)") else {
+
             print("Failed to find USDZ files in local storage.")
             return
         }
-        
-        let cardEntity = try! ModelEntity.loadModel(named: "plantscape-\(name).usdz")
+        let cardname = plantModelUrl.components(separatedBy: "Models/").last ?? ""
+        print("ini woii", plantURL)
+        let cardEntity = try! ModelEntity.loadModel(named: "plantscape-\(cardname)")
         
         let plantEntity = try! ModelEntity.load(contentsOf: plantURL)
-//        let cardEntity = try! ModelEntity.load(contentsOf: cardURL)
         
         // Generate collision shapes
         plantEntity.generateCollisionShapes(recursive: true)
